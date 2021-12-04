@@ -1,0 +1,79 @@
+@import url("../animations.scss");
+
+[wrapper] {
+    background: linear-gradient(135deg, var(--blue) 45%, var(--blue2));
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 2ch;
+    text-align: center  ;
+
+    background: #111;
+    clip-path: polygon(0 0,  0 100%, 100% 80%, 100% 0);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+[ldd] {
+    color: #eee;
+
+    &::before {
+        content: '<';
+        color: var(--orange);
+    }
+
+    &::after {
+        content: '/>';
+        color: var(--orange);
+    }
+}
+
+[discord] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+[half] {
+    width: 100%;
+    padding: 3rem 2rem;
+}
+
+.media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2/1;
+
+    img {
+        position: absolute;
+    }
+
+    [laptop] {
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
+    }
+
+    [webpage] {
+        top: 27%;
+        left: 40%;
+        animation: slide linear 2s infinite;
+        width: 140px;
+    }
+}
+
+footer {
+    width: 100%;
+    min-height: 35vh;
+    background: #111;
+    clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 0);
+
+    [icon] {
+        max-width: 80px;
+    }
+}

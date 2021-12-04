@@ -1,1 +1,124 @@
-/* You can add global styles to this file, and also import other style files */
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Share+Tech+Mono');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+// css adjustments
+html, body {
+    max-width: 100vw !important;
+}
+
+:root {
+    font-size: 16px;
+    --blue: #152f47;
+    --blue2: #1d476e;
+    --orange: #ff9100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-family: roboto;
+}
+
+[mono] {
+    font-family:  'Share Tech mono', Courier, monospace;
+}
+
+[sans] {
+    font-family: sans-serif;
+}
+
+[icon] {
+    font-family: 'Material Icons';
+    font-size: 1.4rem;
+}
+
+[center] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[mobile-adjust] {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 900px) {
+        flex-direction: row;
+    }
+}
+
+[half-screen] {
+    width: 100vw;
+    min-height: 50vh;
+}
+
+[contain] {
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+[panel] {
+    background: #111;
+    color: #ddd;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+[button], a[button] {
+    line-height: 1.5;
+    border: none;
+    border-radius: 3px;
+    padding: 1ch 1.5ch;
+    margin-top: 2rem;
+    background: var(--orange);
+    color: #000;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+}
+
+// Overwriting styles
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 2;
+    color: var(--orange);
+
+    a {
+        color: inherit;
+    }
+}
+
+p {
+    line-height: 1.75;
+    text-indent: 2ch;
+}
+
+ul {
+    margin-left: 2rem;
+
+    li {
+        list-style-type: none;
+        line-height: 1.75;
+        margin-bottom: 0.75rem;
+
+        &::before {
+            content: '♦ ';
+            color: var(--orange);
+        }
+    }
+}
+
+a, a:visited, a:active, a:hover {
+    text-decoration: none;
+    font-family: 'Share Tech Mono', Courier, monospace;
+}
